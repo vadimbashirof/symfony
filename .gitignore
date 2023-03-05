@@ -1,10 +1,18 @@
-
-###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
+/node_modules
+/public/hot
+/public/storage/
+/public/css/
+/public/js/
+/public/fonts/
+/public/svg/
+/public/images/
+/public/front/
+/public/back/
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
