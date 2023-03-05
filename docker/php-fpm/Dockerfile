@@ -14,6 +14,11 @@ RUN apt-get update && apt-get install -y libpq-dev \
    libmemcached-dev \
    zlib1g-dev
 
+RUN curl -sS https://get.symfony.com/cli/installer | bash
+RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
+RUN git config --global user.email "vadimbashirof@gmail.com" \
+    && git config --global user.name "vadimbashirof"
+
 # Tools
 RUN docker-php-ext-install intl \
     && docker-php-ext-install zip \
