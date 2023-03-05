@@ -27,6 +27,7 @@ class BookCategory
     public function setId(int $id): self
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -38,6 +39,7 @@ class BookCategory
     public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -49,6 +51,7 @@ class BookCategory
     public function setSlug(?string $slug): self
     {
         $this->slug = $slug;
+
         return $this;
     }
 }

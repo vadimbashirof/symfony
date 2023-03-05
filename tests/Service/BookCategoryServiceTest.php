@@ -20,7 +20,7 @@ class BookCategoryServiceTest extends TestCase
             ->with([], ['title' => Criteria::ASC])
             ->willReturn([(new BookCategory())->setId(7)
                 ->setTitle('Test')
-                ->setSlug('test')
+                ->setSlug('test'),
             ]);
 
         $service = new BookCategoryService($repository);

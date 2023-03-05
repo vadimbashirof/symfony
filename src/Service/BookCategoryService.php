@@ -12,8 +12,7 @@ class BookCategoryService
 {
     public function __construct(
         private readonly BookCategoryRepository $bookCategoryRepository
-    )
-    {
+    ) {
     }
 
     public function getCategories(): BookCategoryListResponse
@@ -22,7 +21,7 @@ class BookCategoryService
             ->findBy([], ['title' => Criteria::ASC]);
 
         $items = array_map(
-            fn(BookCategory $bookCategory) => new BookCategoryListItem(
+            fn (BookCategory $bookCategory) => new BookCategoryListItem(
                 id: $bookCategory->getId(),
                 title: $bookCategory->getTitle(),
                 slug: $bookCategory->getSlug()

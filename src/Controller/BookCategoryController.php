@@ -11,8 +11,7 @@ class BookCategoryController extends AbstractController
 {
     public function __construct(
         private readonly BookCategoryService $bookCategoryService
-    )
-    {
+    ) {
     }
 
     #[Route('/api/v1/book-categories')]

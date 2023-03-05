@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-
 class BookCategoryListResponse
 {
     /**
@@ -10,8 +9,7 @@ class BookCategoryListResponse
      */
     public function __construct(
         private readonly array $items
-    )
-    {
+    ) {
     }
 
     /**
