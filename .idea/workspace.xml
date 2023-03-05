@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d786da8f-01bd-4326-af85-39363bd9aea1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/BookCategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/BookCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/BookCategoryListItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/BookCategoryListResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BookCategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/BookCategoryService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/BookCategoryServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/templates/default.conf.template" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/templates/default.conf.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/postgres/initdb.d/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/postgres/initdb.d/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <interpreter name="symfony-api-php:latest" composer="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PHPCSFixerProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER" />
+  </component>
+  <component name="PhpDebugGeneral" break_at_first_line="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="b2af1f13-27c6-4d52-bab2-672e8eb5f60c" name="docker" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpStanProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="symfony-api-php:latest" />
+  <component name="ProjectId" id="2MaP4SKPoHGAIvGuCop94OMb6bY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
+    "last_opened_file_path": "/home/vajasana/Develop/developments/symfony-api/vendor/autoload.php",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.php.quality.tools",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Repository" />
+      <recent name="$PROJECT_DIR$/src/Entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Service" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Target.fixtures">
+    <configuration name="csfix" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="csfix" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="fixtures" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="fixtures" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="phpstan" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="phpstan" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="BookCategoryServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Service\BookCategoryServiceTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Service/BookCategoryServiceTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BookCategoryServiceTest.testGetCategories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Service\BookCategoryServiceTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Service/BookCategoryServiceTest.php" method="testGetCategories" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="docker" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Target.csfix" />
+      <item itemvalue="Makefile Target.fixtures" />
+      <item itemvalue="Makefile Target.phpstan" />
+      <item itemvalue="PHP Remote Debug.debug" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.BookCategoryServiceTest" />
+      <item itemvalue="PHPUnit.BookCategoryServiceTest.testGetCategories" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.fixtures" />
+        <item itemvalue="Makefile Target.fixtures" />
+        <item itemvalue="Makefile Target.csfix" />
+        <item itemvalue="Makefile Target.phpstan" />
+        <item itemvalue="PHPUnit.BookCategoryServiceTest.testGetCategories" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d786da8f-01bd-4326-af85-39363bd9aea1" name="Changes" comment="" />
+      <created>1678002528421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678002528421</updated>
+      <workItem from="1678002529590" duration="1922000" />
+      <workItem from="1678004459779" duration="16664000" />
+      <workItem from="1678021190890" duration="2924000" />
+      <workItem from="1678024145414" duration="1338000" />
+      <workItem from="1678025551121" duration="8140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/symfony_api@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1678032739286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/symfony_api@BookCategoryServiceTest_testGetCategories.xml" NAME="BookCategoryServiceTest.testGetCategories Coverage Results" MODIFIED="1678025373841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

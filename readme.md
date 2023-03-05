@@ -93,6 +93,31 @@ MAIL_PORT=1025
 
 ***
 
+**Настройка docker**
+
+1. заходим в настройки `File -> Settings -> Build, Execution, Deployment -> Docker`
+2. нажимаем на `+` созадем новое соеденение с докером
+3. необходимо выбрать `TCP socket` и в поле `Engine API URL` указать сокет на котором находится докер
+4. чтобы узнать адресс сокета нужно вызвать команду `docker context ls`
+5. если на linux не установлен `docker-compose` проверить месторасположение можно командой `which docker-compose`  
+   если не установлен то нужно установить `sudo apt install docker-compose`
+6. заходим в настройки `File -> Settings -> Build, Execution, Deployment -> Docker -> Tools`
+7. находим адреса следующих бинарников:  
+   `which docker` -> `/usr/local/bin/docker`  
+   `which docker-compose` -> `/usr/bin/docker-compose`  
+
+   вбиваем эти данные в настройки:
+   `Docker executable: /usr/local/bin/docker`
+   `Docker Machine executable: /usr/bin/docker-compose`
+   `Docker Compose executable: docker-compose`
+8. добавляем CLI Interpreter заходим в настройки `File -> Settings -> PHP` в поле `CLI Interpreter` 
+нажимаем `...` в появившемся окне `+` выбираем `From Docker, Vagrant...` выбираем `Docker`
+сервер указываем который ранее создали `Docker`, и в `image name` выбираем php контейнер 
+который относится к нашему проету, сохраняем. Дальше в настройках `File -> Settings -> PHP`
+нужно правильно нажать `Docker container` дальше нужно изменть `Container path` на свой `/var/www` 
+который указан при создании контейнера.
+
+
 **Настройка xdebug для phpstorm**  
 
 1. заходим в настройки `File -> Settings -> PHP -> Servers` нажимаем на значак плюса `+`
@@ -109,4 +134,13 @@ MAIL_PORT=1025
    `Server: docker` - имя сервера который создавали в предыдущем шаге  
    `IDE key: PHPSTORM` - этот параметр можно посмотреть в файле `docker/php-fpm/xdebug.ini` в параметре `xdebug.idekey`
 
+
+**Настройка phpunitm**
+
+1. для насройки php-unit он должен быть установле и должен быть файл phpunit.xml
+2. заходим в настройки `File -> Settings -> PHP -> Test Frameworks` нажимаем `+`
+выбираем `PHPUnit by Remote Interpreter` выбираем с какого контейнера подгружать php
+3. заполняем `Path to script` и `Default configuration file`  
+   `Path to script` -> `/var/www/vendor/autoload.php`  
+   `Default configuration file` -> `/var/www/phpunit.xml`  
 ***

@@ -1,15 +1,4 @@
-DECLARE @MainDB "laravel"
-DECLARE @TestDB "laravel-logs"
-
-\c @MainDB
-CREATE SCHEMA main;
-CREATE EXTENSION pg_trgm WITH SCHEMA main;
-CREATE EXTENSION citext WITH SCHEMA main;
-CREATE EXTENSION btree_gin WITH SCHEMA main;
-
-CREATE DATABASE @TestDB;
-\c @TestDB
-CREATE SCHEMA main;
-CREATE EXTENSION pg_trgm WITH SCHEMA main;
-
-\c @MainDB
+\c "symfony"
+CREATE EXTENSION pg_trgm WITH SCHEMA public;
+CREATE EXTENSION citext WITH SCHEMA public;
+CREATE EXTENSION btree_gin WITH SCHEMA public;

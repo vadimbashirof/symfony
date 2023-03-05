@@ -1,25 +1,25 @@
 version: "3.7"
 services:
 
-  php-fpm:
+  php:
     build:
       args:
-        phpversion: '${PHP_VERSION:-8.2.0}'
+        phpversion: '${PHP_VERSION:-8.1.0}'
       context: ./docker/php-fpm
       dockerfile: Dockerfile
-    container_name: '${APP_NAME:-laravel}-php-fpm'
+    container_name: '${APP_NAME:-symfony}-php-fpm'
     working_dir: '/var/www'
     volumes:
       - './:/var/www'
       - './docker/php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini'
       - './docker/php-fpm/php.ini:/usr/local/etc/php/php.ini'
     networks:
-      - laravel
+      - symfony
 
   # Nginx
   nginx:
     image: nginx:latest
-    container_name: '${APP_NAME:-laravel}-nginx'
+    container_name: '${APP_NAME:-symfony}-nginx'
     restart: unless-stopped
     ports:
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_NGINX_PORT:-80}:80'
@@ -31,27 +31,28 @@ services:
       - './docker/nginx/templates:/etc/nginx/templates'
       - './docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
     depends_on:
-      - php-fpm
+      - php
     networks:
-      - laravel
+      - symfony
 
   # Postgresql
   pgsql:
     image: postgres:latest
-    container_name: '${APP_NAME:-laravel}-pgsql'
+    container_name: '${APP_NAME:-symfony}-pgsql'
     restart: unless-stopped
     environment:
-      PGPASSWORD: '${DB_PASSWORD:-root}'
-      POSTGRES_DB: '${DB_DATABASE:-laravel}'
-      POSTGRES_USER: '${DB_USERNAME:-root}'
-      POSTGRES_PASSWORD: '${DB_PASSWORD:-root}'
+      POSTGRES_PORT: '${DB_PORT:-5432}'
+      PGPASSWORD: '${DB_PASSWORD:-symfony}'
+      POSTGRES_DB: '${DB_DATABASE:-symfony}'
+      POSTGRES_USER: '${DB_USERNAME:-symfony}'
+      POSTGRES_PASSWORD: '${DB_PASSWORD:-symfony}'
     ports:
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_DB_PORT:-5432}:5432'
     volumes:
       - './docker/postgres/initdb.d:/docker-entrypoint-initdb.d'
-      - '~/Databases/postgresql/${APP_NAME:-laravel}:/var/lib/postgresql/data'
+      - '~/Databases/postgresql/${APP_NAME:-symfony}:/var/lib/postgresql/data'
     networks:
-      - laravel
+      - symfony
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-d", "${DB_USERNAME:-root}", "-U", "${DB_USERNAME:-root}"]
       retries: 3
@@ -60,13 +61,13 @@ services:
   # Redis
   redis:
     image: redis:alpine
-    container_name: '${APP_NAME:-laravel}-redis'
+    container_name: '${APP_NAME:-symfony}-redis'
     ports:
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_REDIS_PORT:-6379}:6379'
     volumes:
       - './docker/redis/redis.conf:/usr/local/etc/redis/redis.conf'
     networks:
-      - laravel
+      - symfony
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       retries: 3
@@ -75,7 +76,7 @@ services:
   # Adminer
   adminer:
     image: adminer
-    container_name: '${APP_NAME:-laravel}-adminer'
+    container_name: '${APP_NAME:-symfony}-adminer'
     restart: unless-stopped
     ports:
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_ADMINER_PORT:-8080}:8080'
@@ -85,20 +86,20 @@ services:
       ADMINER_DEFAULT_DB_DRIVER: pgsql
       ADMINER_DEFAULT_SERVER: pgsql
       ADMINER_DESIGN: hever
-      ADMINER_DEFAULT_DB_NAME: '${DB_DATABASE:-laravel}'
+      ADMINER_DEFAULT_DB_NAME: '${DB_DATABASE:-symfony}'
     networks:
-      - laravel
+      - symfony
 
   # Mailhog
   mailhog:
     image: mailhog/mailhog:latest
-    container_name: '${APP_NAME:-laravel}-mailhog'
+    container_name: '${APP_NAME:-symfony}-mailhog'
     ports:
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_MAILHOG_PORT:-1025}:1025'
       - '${FORWARD_HOST:-127.0.0.1}:${FORWARD_MAILHOG_DASHBOARD_PORT:-8025}:8025'
     networks:
-      - laravel
+      - symfony
 
 networks:
-  laravel:
+  symfony:
     driver: bridge
